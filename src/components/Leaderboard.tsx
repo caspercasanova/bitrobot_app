@@ -5,9 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -86,7 +84,6 @@ const invoices = [
   },
 ];
 
-
 const shortenWallet = (wallet: string) => {
   if (!wallet) return '';
   if (wallet.length <= 8) return wallet; // too short to shorten
@@ -105,39 +102,53 @@ const UserComponent = ({ wallet }: { wallet: string }) => {
   );
 };
 
-
 export const Leaderboard = () => {
   return (
     <section className="flex flex-col gap-6">
       <Badge className="gap-10 rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-base text-[var(--purple-primary)]">
         <Label className="uppercase">Leaderboard</Label>
       </Badge>
-      <Table className='text-[var(--gray-2)]'>
-
-        <TableHeader className='mb-3'>
+      <Table className="text-[var(--gray-2)]">
+        <TableHeader className="mb-3">
           <TableRow>
-            <TableHead  className='font-medium text-sm leading-none tracking-[-0.04em] align-middle text-[var(--gray-3)]'>Rank</TableHead>
-            <TableHead  className='font-medium text-sm leading-none tracking-[-0.04em] align-middle text-[var(--gray-3)]'>User</TableHead>
-            <TableHead  className='font-medium text-sm leading-none tracking-[-0.04em] align-middle text-[var(--gray-3)]'>Lifetime Earning</TableHead>
-            <TableHead  className='font-medium text-sm leading-none tracking-[-0.04em] align-middle text-[var(--gray-3)]'>This Epoch</TableHead>
-            <TableHead  className='font-medium text-sm leading-none tracking-[-0.04em] align-middle text-[var(--gray-3)]'>Referrals</TableHead>
+            <TableHead className="align-middle text-sm leading-none font-medium tracking-[-0.04em] text-[var(--gray-3)]">
+              Rank
+            </TableHead>
+            <TableHead className="align-middle text-sm leading-none font-medium tracking-[-0.04em] text-[var(--gray-3)]">
+              User
+            </TableHead>
+            <TableHead className="align-middle text-sm leading-none font-medium tracking-[-0.04em] text-[var(--gray-3)]">
+              Lifetime Earning
+            </TableHead>
+            <TableHead className="align-middle text-sm leading-none font-medium tracking-[-0.04em] text-[var(--gray-3)]">
+              This Epoch
+            </TableHead>
+            <TableHead className="align-middle text-sm leading-none font-medium tracking-[-0.04em] text-[var(--gray-3)]">
+              Referrals
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {invoices.map((person, index) => (
-                <TableRow
-                key={person.wallet}
-                className={`
-                    h-10 px-4 py-3
-                    hover:bg-[#EEECFE]
-                    ${index === 0 ? 'bg-[var(--purple-secondary)] text-[var(--purple-primary)]' : ''}
-                `}
-                >
-              <TableCell className='font-aeonik font-medium text-sm leading-none tracking-[-0.04em] align-middle'>{person.rank}</TableCell>
-              <TableCell className='font-aeonik font-medium text-sm leading-none tracking-[-0.04em] align-middle'><UserComponent wallet={person.wallet}></UserComponent></TableCell>
-              <TableCell className='font-aeonik font-medium text-sm leading-none tracking-[-0.04em] align-middle'>{person.lifetime_earning}</TableCell>
-              <TableCell className='font-aeonik font-medium text-sm leading-none tracking-[-0.04em] align-middle'>{person.this_epoch}</TableCell>
-              <TableCell className='font-aeonik font-medium text-sm leading-none tracking-[-0.04em] align-middle'>{person.referrals}</TableCell>
+            <TableRow
+              key={person.wallet}
+              className={`h-10 px-4 py-3 hover:bg-[#EEECFE] ${index === 0 ? 'bg-[var(--purple-secondary)] text-[var(--purple-primary)]' : ''} `}
+            >
+              <TableCell className="font-aeonik align-middle text-sm leading-none font-medium tracking-[-0.04em]">
+                {person.rank}
+              </TableCell>
+              <TableCell className="font-aeonik align-middle text-sm leading-none font-medium tracking-[-0.04em]">
+                <UserComponent wallet={person.wallet}></UserComponent>
+              </TableCell>
+              <TableCell className="font-aeonik align-middle text-sm leading-none font-medium tracking-[-0.04em]">
+                {person.lifetime_earning}
+              </TableCell>
+              <TableCell className="font-aeonik align-middle text-sm leading-none font-medium tracking-[-0.04em]">
+                {person.this_epoch}
+              </TableCell>
+              <TableCell className="font-aeonik align-middle text-sm leading-none font-medium tracking-[-0.04em]">
+                {person.referrals}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

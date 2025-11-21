@@ -1,12 +1,12 @@
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
 
-import { ChevronRight, DifferentLogo, InfoCircle, LogoIcon, Share02 } from './icons';
+import { ChevronRight, DifferentLogo } from './icons';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Card, CardAction, CardContent, CardHeader } from './ui/card';
 import { Label } from './ui/label';
-import { ChartContainer, type ChartConfig } from "@/components/ui/chart"
- 
+import { ChartContainer, type ChartConfig } from '@/components/ui/chart';
+
 export const Earnings = () => {
   return (
     <section className="flex flex-col gap-6">
@@ -133,33 +133,24 @@ const Bonus = () => {
   );
 };
 
-
-
-
-
-
-
-
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-]
+  { month: 'January', desktop: 186, mobile: 80 },
+  { month: 'February', desktop: 305, mobile: 200 },
+  { month: 'March', desktop: 237, mobile: 120 },
+  { month: 'April', desktop: 73, mobile: 190 },
+  { month: 'May', desktop: 209, mobile: 130 },
+  { month: 'June', desktop: 214, mobile: 140 },
+];
 const chartConfig = {
   desktop: {
-    label: "Desktop",
-    color: "#2563eb",
+    label: 'Desktop',
+    color: '#2563eb',
   },
   mobile: {
-    label: "Mobile",
-    color: "#60a5fa",
+    label: 'Mobile',
+    color: '#60a5fa',
   },
-} satisfies ChartConfig
-
-
+} satisfies ChartConfig;
 
 const History = () => {
   return (
@@ -172,20 +163,19 @@ const History = () => {
 
       <CardContent className="mt-auto flex flex-col gap-2 p-0">
         <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-        <BarChart accessibilityLayer data={chartData}>
+          <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis
-            dataKey="month"
-            tickLine={false}
-            tickMargin={10}
-            axisLine={false}
-            tickFormatter={(value) => value.slice(0, 3)}
+              dataKey="month"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+              tickFormatter={(value) => value.slice(0, 3)}
             />
             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
             <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
-        </BarChart>
+          </BarChart>
         </ChartContainer>
-
       </CardContent>
     </Card>
   );

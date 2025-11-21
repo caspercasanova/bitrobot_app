@@ -52,9 +52,11 @@ These are intentional due to scope and limited access:
 
 ## Future Improvements
 
-* [ ] Make layout fully responsive
-* [ ] Add correct brand fonts
-* [ ] Refactor + reorganize components
+- [ ] Make layout fully responsive  
+- [ ] Add proper brand fonts (including weights + variable fonts)  
+- [ ] Refactor + reorganize components for clarity  
+- [ ] Introduce a Typography component to reduce repetitive HTML + Tailwind classes  
 
-A full implementation would begin with a reusable **design system / component library**.
-This makes initial development slower, but dramatically speeds up long-term iteration.
+A full implementation would begin with a reusable **design system / component library**.  
+This slows down initial development slightly, but dramatically improves long-term velocity, reduces HTML noise, and ensures visual consistency across the entire project.
+

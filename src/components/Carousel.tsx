@@ -2,20 +2,11 @@
 
 import * as React from 'react';
 import bgShape from '@/assets/robots.png';
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from '@/components/ui/carousel';
 import { Button } from './ui/button';
@@ -23,16 +14,16 @@ import { ChevronRight, DiscordIcon, ChevronLeft, LogoIcon } from './icons';
 import { Label } from './ui/label';
 import { Badge } from './ui/badge';
 
-
 const Headline = () => (
-    <div className='flex flex-col gap-y-4'>
-        <Badge className="rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-base text-[var(--purple-primary)]">
-            <Label className="uppercase">Discover</Label>
-        </Badge>
-        <h1 className='font-medium !text-[24px] leading-none tracking-normal text-[var(--purple-primary)] '>Explore the BitRobot Network</h1>
-    </div>
-)
-
+  <div className="flex flex-col gap-y-4">
+    <Badge className="rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-base text-[var(--purple-primary)]">
+      <Label className="uppercase">Discover</Label>
+    </Badge>
+    <h1 className="!text-[24px] leading-none font-medium tracking-normal text-[var(--purple-primary)]">
+      Explore the BitRobot Network
+    </h1>
+  </div>
+);
 
 export function MainCarousel() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -155,12 +146,11 @@ export const FancyCardWithBg = () => {
   );
 };
 
-
 export const TextAndCarousel = () => {
   return (
-    <div className='flex flex-col gap-6'>
+    <div className="flex flex-col gap-6">
       <Headline />
       <MainCarousel />
     </div>
   );
-}
+};

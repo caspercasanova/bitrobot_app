@@ -64,7 +64,7 @@ export const Sidebar = () => {
         </div>
       </div>
 
-      <div className="mt-4 flex w-full flex-col gap-2 ">
+      <div className="mt-4 flex w-full flex-col gap-2">
         <SidebarItem
           icon={<File03 className="h-5 w-5" />}
           label="Dashboard"
@@ -90,13 +90,12 @@ export const Sidebar = () => {
         <Separator />
       </div>
 
-      <div className="flex h-full w-full flex-col gap-4 mt-40">
+      <div className="mt-40 flex h-full w-full flex-col gap-4">
         <Badge className="rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-base text-[var(--purple-primary)]">
           <Label className="uppercase">Resources</Label>
         </Badge>
 
         <div className="w-full">
-          {/* Help */}
           <Button
             variant="ghost"
             className="group flex h-[44px] w-full items-center !rounded-none border-none !bg-transparent px-1 text-[var(--gray-2)] hover:text-[var(--purple-primary)]"
@@ -111,7 +110,6 @@ export const Sidebar = () => {
           </Button>
           <Separator />
 
-          {/* Docs */}
           <Button
             variant="ghost"
             className="group flex h-[44px] w-full items-center !rounded-none border-none !bg-transparent px-1 text-[var(--gray-2)] hover:text-[var(--purple-primary)]"
@@ -126,12 +124,11 @@ export const Sidebar = () => {
           </Button>
           <Separator />
 
-          {/* Shop */}
           <Button
             variant="ghost"
             className="group flex h-[44px] w-full items-center !rounded-none border-none !bg-transparent px-1 text-[var(--gray-2)] hover:text-[var(--purple-primary)]"
           >
-            <InfoCircle className="h-5 w-5" />
+            <ShoppingIcon className="h-5 w-5" />
             <div className="flex-1 text-left align-middle text-[16px] leading-none font-bold uppercase">
               Shop
             </div>
@@ -141,7 +138,6 @@ export const Sidebar = () => {
           </Button>
           <Separator />
 
-          {/* About */}
           <Button
             variant="ghost"
             className="group flex h-[44px] w-full items-center !rounded-none border-none !bg-transparent px-1 text-[var(--gray-2)] hover:text-[var(--purple-primary)]"
