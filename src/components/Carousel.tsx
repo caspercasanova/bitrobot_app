@@ -16,7 +16,7 @@ import { Badge } from './ui/badge';
 
 const Headline = () => (
   <div className="flex flex-col gap-y-4">
-    <Badge className="rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-base text-[var(--purple-primary)]">
+    <Badge className="rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-[16px] text-[var(--purple-primary)]">
       <Label className="uppercase">Discover</Label>
     </Badge>
     <h1 className="!text-[24px] leading-none font-medium tracking-normal text-[var(--purple-primary)]">
@@ -102,7 +102,7 @@ export const FancyCardWithBg = () => {
         src={bgShape}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 select-none"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 scale-150 select-none"
       />
 
       <CardContent className="relative z-10 flex h-full flex-row-reverse justify-between">
@@ -115,13 +115,13 @@ export const FancyCardWithBg = () => {
           </Badge>
         </div>
 
-        <div className="self-end">
+        <div className="self-end flex flex-col gap-3">
           <DiscordIcon className="h-8 w-8 text-[var(--purple-primary)]" />
           <div>
             <h3 className="text-4 leading-none font-medium tracking-normal text-[var(--purple-primary)]">
               Discord
             </h3>
-            <p className="text-3 mt-2 leading-snug tracking-normal text-[var(--gray-2)]">
+            <p className="!text-[14px] text-3 mt-2 leading-snug tracking-normal text-[var(--gray-2)] ">
               Stay involved, don&apos;t miss an update. Join the community.
             </p>
           </div>
@@ -129,13 +129,13 @@ export const FancyCardWithBg = () => {
           <div className="flex gap-2">
             <Button
               variant={'outline'}
-              className="gap-1 !border border-1 border-solid !border-[var(--purple-primary)] !bg-[var(--purple-primary)] px-2 py-3 text-xs font-bold text-[#FEFEFE] uppercase"
+              className="gap-1 !text-[14px] !border border-1 border-solid !border-[var(--purple-primary)] !bg-[var(--purple-primary)] px-2 py-3 text-xs font-bold text-[#FEFEFE] uppercase"
             >
               Get Involved
             </Button>
             <Button
               variant={'outline'}
-              className="gap-1 !border border-1 border-solid !border-[var(--purple-primary)] !bg-transparent px-2 py-3 text-xs font-bold text-[var(--purple-primary)] uppercase"
+              className="gap-1 !text-[14px] !border border-1 border-solid !border-[var(--purple-primary)] !bg-transparent !px-2 !py-3 text-xs font-bold text-[var(--purple-primary)] uppercase"
             >
               Learn More
             </Button>

@@ -23,9 +23,10 @@ const Av = () => (
 
 const Username = () => {
   return (
-    <Select>
+    <Select defaultValue='Username 1'>
       <SelectTrigger className="w-[158px] gap-3 rounded-lg !border !border-[#EEECFE] !bg-[#FEFEFE] px-2 py-1 shadow-[0_2px_8px_0_rgba(0,0,0,0.07)]">
         <SelectValue
+
           placeholder="Select User"
           className="!text-[12px] leading-none font-medium tracking-normal"
         />

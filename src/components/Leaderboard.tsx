@@ -105,7 +105,7 @@ const UserComponent = ({ wallet }: { wallet: string }) => {
 export const Leaderboard = () => {
   return (
     <section className="flex flex-col gap-6">
-      <Badge className="gap-10 rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-base text-[var(--purple-primary)]">
+      <Badge className="gap-10 rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-[16px] text-[var(--purple-primary)]">
         <Label className="uppercase">Leaderboard</Label>
       </Badge>
       <Table className="text-[var(--gray-2)]">

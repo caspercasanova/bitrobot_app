@@ -35,11 +35,11 @@ const SidebarItem = ({
     <Button
       type="button"
       onClick={onClick}
-      className={`flex w-full items-center justify-between gap-3 !rounded-none !bg-transparent px-1 py-3 text-[20px] leading-none font-bold tracking-normal uppercase ${active ? 'text-[var(--purple-primary)]' : 'text-[var(--gray-2)]'} `}
+      className={`flex w-full items-center justify-between gap-3 !rounded-none !bg-transparent px-1 py-3  leading-none font-bold tracking-normal uppercase ${active ? 'text-[var(--purple-primary)]' : 'text-[var(--gray-2)]'} `}
     >
       <div className="flex gap-x-3">
-        <div className="shrink-0">{icon}</div>
-        <div>{label}</div>
+        <div className="size-5 shrink-0">{icon}</div>
+        <div className="text-[20px]">{label}</div>
       </div>
       {active && (
         <div className="ml-auto h-[10px] w-[10px] rounded-full bg-[#00C33A] shadow-[0_0_5px_4px_#00C33A33]" />
@@ -66,7 +66,7 @@ export const Sidebar = () => {
 
       <div className="mt-4 flex w-full flex-col gap-2">
         <SidebarItem
-          icon={<File03 className="h-5 w-5" />}
+          icon={<File03 className="size-5 h-5 w-5" />}
           label="Dashboard"
           active={active === 'dashboard'}
           onClick={() => setActive('dashboard')}
@@ -74,7 +74,7 @@ export const Sidebar = () => {
         <Separator />
 
         <SidebarItem
-          icon={<GridDots className="h-5 w-5" />}
+          icon={<GridDots className="size-5  h-5 w-5" />}
           label="Contribute"
           active={active === 'contribute'}
           onClick={() => setActive('contribute')}
@@ -82,7 +82,7 @@ export const Sidebar = () => {
         <Separator />
 
         <SidebarItem
-          icon={<User02 className="h-5 w-5" />}
+          icon={<User02 className="size-5  h-5 w-5" />}
           label="Profile"
           active={active === 'profile'}
           onClick={() => setActive('profile')}
@@ -91,8 +91,8 @@ export const Sidebar = () => {
       </div>
 
       <div className="mt-40 flex h-full w-full flex-col gap-4">
-        <Badge className="rounded-lg bg-[var(--purple-secondary)] px-3 py-2 text-base text-[var(--purple-primary)]">
-          <Label className="uppercase">Resources</Label>
+        <Badge className="rounded-lg bg-[var(--purple-secondary)] px-3 py-2  text-[var(--purple-primary)]">
+          <Label className="!text-[16px] uppercase">Resources</Label>
         </Badge>
 
         <div className="w-full">
@@ -100,8 +100,8 @@ export const Sidebar = () => {
             variant="ghost"
             className="group flex h-[44px] w-full items-center !rounded-none border-none !bg-transparent px-1 text-[var(--gray-2)] hover:text-[var(--purple-primary)]"
           >
-            <HelpCircle className="h-5 w-5" />
-            <div className="flex-1 text-left align-middle text-[16px] leading-none font-bold uppercase">
+            <HelpCircle className="size-5  h-5 w-5" />
+            <div className="flex-1 text-left align-middle text-[20px] leading-none font-bold uppercase">
               Help
             </div>
             <div className="relative h-6 w-6">
@@ -114,8 +114,8 @@ export const Sidebar = () => {
             variant="ghost"
             className="group flex h-[44px] w-full items-center !rounded-none border-none !bg-transparent px-1 text-[var(--gray-2)] hover:text-[var(--purple-primary)]"
           >
-            <File05 className="h-5 w-5" />
-            <div className="flex-1 text-left align-middle text-[16px] leading-none font-bold uppercase">
+            <File05 className="size-5  h-5 w-5" />
+            <div className="flex-1 text-left align-middle text-[20px] leading-none font-bold uppercase">
               Docs
             </div>
             <div className="relative h-6 w-6">
@@ -128,8 +128,8 @@ export const Sidebar = () => {
             variant="ghost"
             className="group flex h-[44px] w-full items-center !rounded-none border-none !bg-transparent px-1 text-[var(--gray-2)] hover:text-[var(--purple-primary)]"
           >
-            <ShoppingIcon className="h-5 w-5" />
-            <div className="flex-1 text-left align-middle text-[16px] leading-none font-bold uppercase">
+            <ShoppingIcon className="size-5  h-5 w-5" />
+            <div className="flex-1 text-left align-middle text-[20px] leading-none font-bold uppercase">
               Shop
             </div>
             <div className="relative h-6 w-6">
@@ -142,8 +142,8 @@ export const Sidebar = () => {
             variant="ghost"
             className="group flex h-[44px] w-full items-center !rounded-none border-none !bg-transparent px-1 text-[var(--gray-2)] hover:text-[var(--purple-primary)]"
           >
-            <InfoCircle className="h-5 w-5" />
-            <div className="flex-1 text-left align-middle text-[16px] leading-none font-bold uppercase">
+            <InfoCircle className="size-5  h-5 w-5" />
+            <div className="flex-1 text-left align-middle text-[20px] leading-none font-bold uppercase">
               About
             </div>
             <div className="relative h-6 w-6">
@@ -156,32 +156,32 @@ export const Sidebar = () => {
         <Card className="flex w-full flex-col gap-4 rounded-2xl bg-[var(--gray-fill)] p-4 shadow-[0_1px_8px_0_rgba(0,0,0,0.1)]">
           <CardHeader className="flex items-center justify-between p-0">
             <Badge className="flex h-8 items-center gap-2 rounded-lg bg-[var(--gold-100)] px-4 py-2 shadow-[0px_1px_8px_0px_#0000001A]">
-              <LogoIcon className="h-4 w-4 text-[var(--gold-primary)]" />
+              <LogoIcon className="size-5  h-4 w-4 text-[var(--gold-primary)]" />
               <Label className="text-base text-[var(--gold-primary)] uppercase">
                 Earn pts
               </Label>
             </Badge>
-            <InfoCircle className="text-muted-foreground h-5 w-5" />
+            <InfoCircle className="text-[var(--gray-2))] h-5 w-5" />
           </CardHeader>
 
           <CardContent className="flex flex-col gap-1.5 p-0">
             <div className="flex items-end">
               <p className="font-[Aeonik] text-[32px] leading-none font-medium tracking-[-0.01em] text-[var(--purple-primary)]">
                 12{' '}
-                <span className="align-baseline text-base leading-none font-medium tracking-[-0.01em]">
+                <span className="text-[14px] align-baseline text-base leading-none font-medium tracking-[-0.01em]">
                   referrals
                 </span>
               </p>
             </div>
 
-            <label className="text-xs text-[var(--gray-2)]">
+            <label className=" text-xs text-[var(--gray-2)]">
               Refer Friends to earn more
             </label>
 
             <CardAction className="mt-2">
               <Button
                 variant={'outline'}
-                className="gap-1 !border border-1 border-solid !border-[var(--purple-primary)] !bg-transparent px-2 py-3 text-xs font-bold text-[var(--purple-primary)] uppercase"
+                className="gap-1 !text-[14px] !border border-1 border-solid !border-[var(--purple-primary)] !bg-transparent px-2 py-3  font-bold text-[var(--purple-primary)] uppercase"
               >
                 Share Link <Share02 className="h-4 w-4" />
               </Button>
